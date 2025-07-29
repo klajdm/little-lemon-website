@@ -49,7 +49,7 @@ const Footer = () => {
             <section style={sectionStyle}>
                 <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
                     <img src={small_logo} alt="Little Lemon Logo" style={logoStyle} />
-                    <p style={textStyle}>© 2024 Little Lemon Restaurant</p>
+                    <p style={textStyle}>© {new Date().getFullYear()} Little Lemon Restaurant</p>
                 </div>
                 
                 <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
