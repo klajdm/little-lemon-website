@@ -7,6 +7,9 @@ import About from "./About";
 import Menu from "./Menu";
 import OrderOnline from "./OrderOnline";
 import Login from "./Login";
+import PrivacyPolicy from "./PrivacyPolicy";
+import TermsAndConditions from "./TermsAndConditions";
+import Contact from "./Contact";
 
 const Main = () => {
   // const [availableTimes, setAvailableTimes] = useState(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"])
@@ -71,6 +74,9 @@ const Main = () => {
         <Route path="/order-online" element={<OrderOnline />} />
         <Route path="/login" element={<Login />} />
         <Route path="/confirmed" element={<ConfirmedBooking />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </main>
   );

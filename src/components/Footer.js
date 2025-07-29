@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import small_logo from "../images/small_logo.png";
 
 const Footer = () => {
@@ -58,26 +59,44 @@ const Footer = () => {
                 </div>
                 
                 <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                    <button 
-                        onClick={() => alert('Privacy policy page would be implemented here')}
-                        style={{...linkStyle, background: 'none', border: 'none', cursor: 'pointer'}}
+                    <Link 
+                        to="/privacy-policy"
+                        style={{
+                            ...linkStyle,
+                            textDecoration: 'none',
+                            transition: 'opacity 0.3s ease'
+                        }}
+                        onMouseEnter={(e) => e.target.style.opacity = '0.8'}
+                        onMouseLeave={(e) => e.target.style.opacity = '1'}
                     >
-                        Privacy
-                    </button>
+                        Privacy Policy
+                    </Link>
                     <span style={textStyle}>|</span>
-                    <button 
-                        onClick={() => alert('Terms page would be implemented here')}
-                        style={{...linkStyle, background: 'none', border: 'none', cursor: 'pointer'}}
+                    <Link 
+                        to="/terms-and-conditions"
+                        style={{
+                            ...linkStyle,
+                            textDecoration: 'none',
+                            transition: 'opacity 0.3s ease'
+                        }}
+                        onMouseEnter={(e) => e.target.style.opacity = '0.8'}
+                        onMouseLeave={(e) => e.target.style.opacity = '1'}
                     >
-                        Terms
-                    </button>
+                        Terms & Conditions
+                    </Link>
                     <span style={textStyle}>|</span>
-                    <button 
-                        onClick={() => alert('Contact page would be implemented here')}
-                        style={{...linkStyle, background: 'none', border: 'none', cursor: 'pointer'}}
+                    <Link 
+                        to="/contact"
+                        style={{
+                            ...linkStyle,
+                            textDecoration: 'none',
+                            transition: 'opacity 0.3s ease'
+                        }}
+                        onMouseEnter={(e) => e.target.style.opacity = '0.8'}
+                        onMouseLeave={(e) => e.target.style.opacity = '1'}
                     >
                         Contact
-                    </button>
+                    </Link>
                 </div>
             </section>
         </footer>
