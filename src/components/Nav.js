@@ -21,6 +21,14 @@ const Nav = () => {
   const logoStyle = {
     height: "50px",
     width: "auto",
+    cursor: "pointer",
+    transition: "transform 0.3s ease",
+  };
+
+  const logoLinkStyle = {
+    display: "flex",
+    alignItems: "center",
+    textDecoration: "none",
   };
 
   const ulStyle = {
@@ -51,7 +59,20 @@ const Nav = () => {
 
   return (
     <nav style={navStyle}>
-      <img src={littlelemon_logo} alt="Little Lemon Logo" style={logoStyle} />
+      <NavLink 
+        to="/" 
+        style={logoLinkStyle}
+        onMouseEnter={(e) => {
+          const img = e.target.querySelector('img');
+          if (img) img.style.transform = "scale(1.05)";
+        }}
+        onMouseLeave={(e) => {
+          const img = e.target.querySelector('img');
+          if (img) img.style.transform = "scale(1)";
+        }}
+      >
+        <img src={littlelemon_logo} alt="Little Lemon Logo" style={logoStyle} />
+      </NavLink>
       <ul style={ulStyle}>
         <li>
           <NavLink
