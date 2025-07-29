@@ -81,7 +81,7 @@ const Login = () => {
                   onChange={handleInputChange}
                   required={!isLogin}
                   style={{
-                    width: "95%",
+                    width: "90%",
                     padding: "0.75rem",
                     border: "1px solid #ddd",
                     borderRadius: "5px",
@@ -108,7 +108,7 @@ const Login = () => {
                   onChange={handleInputChange}
                   required={!isLogin}
                   style={{
-                    width: "95%",
+                    width: "90%",
                     padding: "0.75rem",
                     border: "1px solid #ddd",
                     borderRadius: "5px",
@@ -138,7 +138,7 @@ const Login = () => {
               onChange={handleInputChange}
               required
               style={{
-                width: "100%",
+                width: "95%",
                 padding: "0.75rem",
                 border: "1px solid #ddd",
                 borderRadius: "5px",
@@ -166,7 +166,7 @@ const Login = () => {
               onChange={handleInputChange}
               required
               style={{
-                width: "100%",
+                width: "95%",
                 padding: "0.75rem",
                 border: "1px solid #ddd",
                 borderRadius: "5px",
@@ -195,7 +195,7 @@ const Login = () => {
                 onChange={handleInputChange}
                 required={!isLogin}
                 style={{
-                  width: "100%",
+                  width: "95%",
                   padding: "0.75rem",
                   border: "1px solid #ddd",
                   borderRadius: "5px",
