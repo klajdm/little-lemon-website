@@ -3,6 +3,17 @@
   font-family: 'Markazi Text', serif;
 }
 
+/* Add bottom padding to prevent content from being hidden behind fixed footer */
+body {
+  margin: 0;
+  padding-bottom: 80px; /* Height of footer + some extra space */
+}
+
+main {
+  min-height: calc(100vh - 140px); /* Account for nav and footer */
+  padding-bottom: 2rem;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -10,9 +10,15 @@ const BookingForm = (props) => {
    const [date, setDate] = useState("");
    const [times, setTimes] = useState("")
 
-   const handleSumbit = (e) => {
+   const handleSubmit = (e) => {
    e.preventDefault();
-   props.submitForm(e);
+   const formData = {
+     date,
+     time: times,
+     guests: parseInt(guests),
+     occasion
+   };
+   props.submitForm(formData);
    };
 
    const handleChange = (e) => {
@@ -23,7 +29,7 @@ const BookingForm = (props) => {
   return (
     <header>
       <section>
-        <form onSubmit={handleSumbit}>
+        <form onSubmit={handleSubmit}>
           <fieldset>
             <div>
               <label htmlFor="book-date">Choose Date</label>
