@@ -3,11 +3,38 @@ import React from 'react';
 const About = () => {
     return (
         <main>
-            <section style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
-                <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                    <h1>About Little Lemon</h1>
-                    <h2 style={{ color: '#495E57', marginBottom: '1rem' }}>Chicago</h2>
+            {/* Hero Header Section */}
+            <section style={{
+                background: 'linear-gradient(135deg, #495E57 0%, #3A4B47 100%)',
+                color: '#FFFFFF',
+                padding: '4rem 2rem',
+                textAlign: 'center',
+                marginBottom: '3rem'
+            }}>
+                <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                    <h1 style={{
+                        fontSize: '3.5rem',
+                        fontWeight: '600',
+                        margin: '0 0 1rem 0',
+                        textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+                    }}>About Little Lemon</h1>
+                    <h2 style={{
+                        fontSize: '2rem',
+                        color: '#F4CE14',
+                        margin: '0 0 1.5rem 0',
+                        fontWeight: '400'
+                    }}>Chicago's Mediterranean Gem</h2>
+                    <p style={{
+                        fontSize: '1.3rem',
+                        opacity: '0.9',
+                        maxWidth: '600px',
+                        margin: '0 auto',
+                        lineHeight: '1.6'
+                    }}>Discover the story behind our family-owned Mediterranean restaurant</p>
                 </div>
+            </section>
+            
+            <section style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
                 
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
                     <div>

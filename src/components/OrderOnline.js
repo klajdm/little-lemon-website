@@ -46,13 +46,69 @@ const OrderOnline = () => {
 
     return (
         <main>
-            <section style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
-                <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                    <h1>Order Online</h1>
-                    <p style={{ fontSize: '1.2rem', color: '#495E57' }}>
-                        Order your favorite Mediterranean dishes for delivery or pickup
-                    </p>
+            {/* Hero Header Section */}
+            <section style={{
+                background: 'linear-gradient(135deg, #495E57 0%, #3A4B47 100%)',
+                color: '#FFFFFF',
+                padding: '4rem 2rem',
+                textAlign: 'center',
+                marginBottom: '3rem'
+            }}>
+                <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                    <h1 style={{
+                        fontSize: '3.5rem',
+                        fontWeight: '600',
+                        margin: '0 0 1rem 0',
+                        textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+                    }}>Order Online</h1>
+                    <p style={{
+                        fontSize: '1.3rem',
+                        opacity: '0.9',
+                        maxWidth: '600px',
+                        margin: '0 auto 2rem auto',
+                        lineHeight: '1.6'
+                    }}>Order your favorite Mediterranean dishes for delivery or pickup</p>
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        gap: '2rem',
+                        flexWrap: 'wrap'
+                    }}>
+                        <div style={{
+                            padding: '0.75rem 1.5rem',
+                            backgroundColor: 'rgba(244, 206, 20, 0.2)',
+                            borderRadius: '20px',
+                            border: '2px solid #F4CE14',
+                            color: '#F4CE14',
+                            fontWeight: '500'
+                        }}>
+                            🚚 Fast Delivery
+                        </div>
+                        <div style={{
+                            padding: '0.75rem 1.5rem',
+                            backgroundColor: 'rgba(244, 206, 20, 0.2)',
+                            borderRadius: '20px',
+                            border: '2px solid #F4CE14',
+                            color: '#F4CE14',
+                            fontWeight: '500'
+                        }}>
+                            📦 Easy Pickup
+                        </div>
+                        <div style={{
+                            padding: '0.75rem 1.5rem',
+                            backgroundColor: 'rgba(244, 206, 20, 0.2)',
+                            borderRadius: '20px',
+                            border: '2px solid #F4CE14',
+                            color: '#F4CE14',
+                            fontWeight: '500'
+                        }}>
+                            💳 Secure Payment
+                        </div>
+                    </div>
                 </div>
+            </section>
+            
+            <section style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
 
                 <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '3rem' }}>
                     {/* Menu Items */}

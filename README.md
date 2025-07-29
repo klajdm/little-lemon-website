@@ -102,6 +102,7 @@ For questions about this project, please contact:
 ## Screenshots
 
 <img width="1296" height="836" alt="Image" src="https://github.com/user-attachments/assets/53bf3a44-4bbb-4216-86fc-ebb42d1e7ee7" />
+<img width="1296" height="753" alt="Image" src="https://github.com/user-attachments/assets/c646b6cf-c692-42a1-afde-af6f58b8ee33" />
 <img width="1298" height="658" alt="Image" src="https://github.com/user-attachments/assets/cfc7b077-921e-470a-abf7-f19f743387aa" />
 <img width="1296" height="1005" alt="Image" src="https://github.com/user-attachments/assets/fcd54dc6-978b-4fd9-8719-cba552fa211b" />
 

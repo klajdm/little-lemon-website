@@ -30,13 +30,42 @@ const Menu = () => {
 
     return (
         <main>
-            <section style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
-                <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                    <h1>Our Menu</h1>
-                    <p style={{ fontSize: '1.2rem', color: '#495E57' }}>
-                        Discover our selection of traditional Mediterranean dishes with a modern twist
-                    </p>
+            {/* Hero Header Section */}
+            <section style={{
+                background: 'linear-gradient(135deg, #495E57 0%, #3A4B47 100%)',
+                color: '#FFFFFF',
+                padding: '4rem 2rem',
+                textAlign: 'center',
+                marginBottom: '3rem'
+            }}>
+                <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                    <h1 style={{
+                        fontSize: '3.5rem',
+                        fontWeight: '600',
+                        margin: '0 0 1rem 0',
+                        textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+                    }}>Our Menu</h1>
+                    <p style={{
+                        fontSize: '1.3rem',
+                        opacity: '0.9',
+                        maxWidth: '600px',
+                        margin: '0 auto',
+                        lineHeight: '1.6'
+                    }}>Discover our selection of traditional Mediterranean dishes with a modern twist</p>
+                    <div style={{
+                        marginTop: '2rem',
+                        padding: '1rem 2rem',
+                        backgroundColor: 'rgba(244, 206, 20, 0.2)',
+                        borderRadius: '25px',
+                        display: 'inline-block',
+                        border: '2px solid #F4CE14'
+                    }}>
+                        <span style={{ color: '#F4CE14', fontWeight: '500' }}>✨ Fresh • Authentic • Delicious ✨</span>
+                    </div>
                 </div>
+            </section>
+            
+            <section style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
 
                 {menuItems.map((category, index) => (
                     <div key={index} style={{ marginBottom: '3rem' }}>
