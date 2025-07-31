@@ -5,82 +5,31 @@ const About = () => {
   return (
     <main>
       {/* Hero Header Section */}
-      <section
-        style={{
-          background: "linear-gradient(135deg, #495E57 0%, #3A4B47 100%)",
-          color: "#FFFFFF",
-          padding: "4rem 2rem",
-          textAlign: "center",
-          marginBottom: "3rem",
-        }}
-      >
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <h1
-            style={{
-              fontSize: "3.5rem",
-              fontWeight: "600",
-              margin: "0 0 1rem 0",
-              textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
-            }}
-          >
+      <section className="bg-gradient-to-br from-[#495E57] to-[#3A4B47] text-white py-16 px-8 text-center mb-12">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-6xl font-semibold mb-4 drop-shadow-lg">
             About Little Lemon
           </h1>
-          <h2
-            style={{
-              fontSize: "2rem",
-              color: "#F4CE14",
-              margin: "0 0 1.5rem 0",
-              fontWeight: "400",
-            }}
-          >
+          <h2 className="text-3xl text-[#F4CE14] mb-6 font-normal">
             Chicago's Mediterranean Gem
           </h2>
-          <p
-            style={{
-              fontSize: "1.3rem",
-              opacity: "0.9",
-              maxWidth: "600px",
-              margin: "0 auto",
-              lineHeight: "1.6",
-            }}
-          >
+          <p className="text-xl opacity-90 max-w-2xl mx-auto leading-relaxed">
             Discover the story behind our family-owned Mediterranean restaurant
           </p>
         </div>
       </section>
 
-      <section
-        style={{ padding: "2rem", maxWidth: "1200px", margin: "0 auto" }}
-      >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "3rem",
-            alignItems: "center",
-          }}
-        >
+      <section className="px-8 py-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p
-              style={{
-                fontSize: "1.1rem",
-                lineHeight: "1.6",
-                marginBottom: "1.5rem",
-              }}
-            >
+            <p className="text-lg leading-relaxed mb-6">
               Little Lemon is a charming neighborhood bistro that serves simple
               food and classic cocktails in a lively but casual environment. We
               are a family-owned Mediterranean restaurant, focused on
               traditional recipes served with a modern twist.
             </p>
 
-            <p
-              style={{
-                fontSize: "1.1rem",
-                lineHeight: "1.6",
-                marginBottom: "1.5rem",
-              }}
-            >
+            <p className="text-lg leading-relaxed mb-6">
               Our chefs draw inspiration from Italian, Greek, and Turkish
               culture and have a menu of 12–15 items that they rotate
               seasonally. The restaurant has a rustic and relaxed atmosphere
@@ -88,10 +37,10 @@ const About = () => {
               time of the day.
             </p>
 
-            <h3 style={{ color: "#495E57", marginBottom: "1rem" }}>
+            <h3 className="text-[#495E57] text-xl font-medium mb-4">
               Our Story
             </h3>
-            <p style={{ fontSize: "1.1rem", lineHeight: "1.6" }}>
+            <p className="text-lg leading-relaxed">
               Founded in 1995 by brothers Mario and Adrian, Little Lemon started
               as a small family restaurant with a dream to bring authentic
               Mediterranean flavors to Chicago. Today, we continue that
@@ -100,63 +49,29 @@ const About = () => {
             </p>
           </div>
 
-          <div style={{ textAlign: "center" }}>
-            <div
-              style={{
-                backgroundColor: "#F4CE14",
-                padding: "2rem",
-                borderRadius: "10px",
-                marginBottom: "2rem",
-              }}
-            >
-              <h3 style={{ margin: "0 0 1rem 0" }}>Visit Us</h3>
-              <p style={{ margin: "0.5rem 0" }}>
-                <strong>Address:</strong>
+          <div className="text-center">
+            <div className="bg-[#F4CE14] p-8 rounded-xl mb-8">
+              <h3 className="text-xl font-medium mb-4">Visit Us</h3>
+              <p className="my-2">
+                <strong className="uppercase">Address:</strong>
                 <br />
                 123 Mediterranean Ave
                 <br />
                 Chicago, IL 60601
               </p>
-              <p style={{ margin: "0.5rem 0" }}>
+              <p className="my-2">
                 <strong>Phone:</strong>
                 <br />
                 (312) 555-LEMON
               </p>
-              <p style={{ margin: "0.5rem 0" }}>
+              <p className="my-2">
                 <strong>Hours:</strong>
                 <br />
                 Mon-Sun: 11:00 AM - 10:00 PM
               </p>
 
-              <Link to="/contact" style={{ textDecoration: "none" }}>
-                <button
-                  style={{
-                    backgroundColor: "#495E57",
-                    color: "#F4CE14",
-                    border: "2px solid #F4CE14",
-                    padding: "0.75rem 1.5rem",
-                    borderRadius: "25px",
-                    fontSize: "1rem",
-                    fontWeight: "600",
-                    cursor: "pointer",
-                    marginTop: "1rem",
-                    width: "100%",
-                    transition: "all 0.3s ease",
-                    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-                  }}
-                  onMouseOver={(e) => {
-                    e.target.style.backgroundColor = "#F4CE14";
-                    e.target.style.color = "#495E57";
-                    e.target.style.transform = "translateY(-2px)";
-                    e.target.style.boxShadow = "0 4px 8px rgba(0,0,0,0.2)";
-                  }}
-                  onMouseOut={(e) => {
-                    e.target.style.backgroundColor = "#495E57";
-                    e.target.style.color = "#F4CE14";
-                    e.target.style.transform = "translateY(0)";
-                    e.target.style.boxShadow = "0 2px 4px rgba(0,0,0,0.1)";
-                  }}
-                >
+              <Link to="/contact" className="no-underline">
+                <button className="bg-[#495E57] text-[#F4CE14] border-2 border-[#F4CE14] px-6 py-3 rounded-full text-base font-semibold cursor-pointer mt-4 w-full transition-all duration-300 shadow-md hover:bg-[#F4CE14] hover:text-[#495E57] hover:-translate-y-0.5 hover:shadow-lg">
                   Contact Us
                 </button>
               </Link>
