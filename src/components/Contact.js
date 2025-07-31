@@ -40,80 +40,23 @@ const Contact = () => {
   };
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        backgroundColor: "#FBFBFB",
-        padding: "40px 20px",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
-      >
+    <div className="min-h-screen bg-gray-50 py-10 px-5">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div
-          style={{
-            background: "linear-gradient(135deg, #495E57 0%, #F4CE14 100%)",
-            color: "white",
-            padding: "60px 40px",
-            textAlign: "center",
-            borderRadius: "20px 20px 0 0",
-            marginBottom: "0",
-          }}
-        >
-          <h1
-            style={{
-              fontSize: "3rem",
-              marginBottom: "15px",
-              color: "white",
-            }}
-          >
+        <div className="bg-gradient-to-br from-[#495E57] to-[#F4CE14] text-white py-15 px-10 text-center rounded-t-3xl mb-0">
+          <h1 className="text-5xl mb-4 text-white font-bold">
             Contact Us
           </h1>
-          <p
-            style={{
-              fontSize: "1.3rem",
-              color: "#E8E8E8",
-              margin: 0,
-              maxWidth: "600px",
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
-          >
+          <p className="text-xl text-gray-200 m-0 max-w-2xl mx-auto">
             We'd love to hear from you! Get in touch with any questions,
             feedback, or special requests.
           </p>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "0",
-            backgroundColor: "white",
-            borderRadius: "0 0 20px 20px",
-            boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
-            overflow: "hidden",
-          }}
-        >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white rounded-b-3xl shadow-2xl overflow-hidden">
           {/* Contact Information */}
-          <div
-            style={{
-              padding: "50px 40px",
-              backgroundColor: "#495E57",
-              color: "white",
-            }}
-          >
-            <h2
-              style={{
-                fontSize: "2rem",
-                color: "#F4CE14",
-                marginBottom: "30px",
-              }}
-            >
+          <div className="py-12 px-10 bg-[#495E57] text-white">
+            <h2 className="text-3xl text-[#F4CE14] mb-8">
               Get In Touch
             </h2>
 

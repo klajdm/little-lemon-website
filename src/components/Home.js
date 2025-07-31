@@ -40,132 +40,66 @@ const Home = () => {
   ];
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
-      <header style={{
-        background: 'linear-gradient(135deg, #495E57 0%, #F4CE14 100%)',
-        color: 'white',
-        padding: '80px 20px',
-        textAlign: 'center',
-        flex: '0 0 auto'
-      }}>
-        <section style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '40px',
-          alignItems: 'center'
-        }}>
-          <div style={{ textAlign: 'left' }}>
-            <h1 style={{
-              fontSize: '3.5rem',
-              fontWeight: 'bold',
-              marginBottom: '10px',
-              color: '#F4CE14'
-            }}>Little Lemon</h1>
-            <h2 style={{
-              fontSize: '2rem',
-              marginBottom: '20px',
-              color: 'white'
-            }}>Chicago</h2>
-            <p style={{
-              fontSize: '1.2rem',
-              lineHeight: '1.6',
-              marginBottom: '30px',
-              color: '#E8E8E8'
-            }}>
+      <header className="bg-gradient-to-br from-[#495E57] to-[#F4CE14] text-white py-20 px-5 text-center flex-none">
+        <section className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div className="text-left">
+            <h1 className="text-6xl font-bold mb-3 text-[#F4CE14]">
+              Little Lemon
+            </h1>
+            <h2 className="text-3xl mb-5 text-white">
+              Chicago
+            </h2>
+            <p className="text-xl leading-relaxed mb-8 text-gray-200">
               We are a family owned Mediterranean restaurant, focused on
               traditional recipes served with a modern twist. Experience the
               authentic flavors of the Mediterranean in the heart of Chicago.
             </p>
             <Link to="/booking">
-              <button style={{
-                backgroundColor: '#F4CE14',
-                color: '#495E57',
-                border: 'none',
-                padding: '15px 30px',
-                fontSize: '1.1rem',
-                fontWeight: 'bold',
-                borderRadius: '8px',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease',
-                boxShadow: '0 4px 15px rgba(244, 206, 20, 0.3)'
-              }} aria-label="Reserve a table at Little Lemon">
+              <button 
+                className="bg-[#F4CE14] text-[#495E57] border-none px-8 py-4 text-lg font-bold rounded-lg cursor-pointer transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                aria-label="Reserve a table at Little Lemon"
+              >
                 Reserve Table
               </button>
             </Link>
           </div>
-          <div style={{ textAlign: 'center' }}>
+          <div className="text-center">
             <img 
               src={food1} 
               alt="Delicious Mediterranean food at Little Lemon restaurant" 
-              style={{
-                width: '100%',
-                maxWidth: '400px',
-                height: 'auto',
-                borderRadius: '15px',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.3)'
-              }}
+              className="w-full max-w-md h-auto rounded-2xl shadow-2xl"
             />
           </div>
         </section>
       </header>
 
       {/* Features Section */}
-      <section style={{
-        padding: '80px 20px',
-        backgroundColor: '#FBFBFB',
-        flex: '1'
-      }}>
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          textAlign: 'center'
-        }}>
-          <h2 style={{
-            fontSize: '2.5rem',
-            color: '#495E57',
-            marginBottom: '20px'
-          }}>Why Choose Little Lemon?</h2>
-          <p style={{
-            fontSize: '1.1rem',
-            color: '#666',
-            marginBottom: '60px',
-            maxWidth: '600px',
-            margin: '0 auto 60px auto'
-          }}>
-            Discover what makes our Mediterranean restaurant special
+      <section className="py-20 px-5 bg-gray-50 flex-1">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl text-[#495E57] mb-5">
+            Why Choose Little Lemon?
+          </h2>
+          <p className="text-lg text-gray-600 mb-15">
+            Discover what makes our restaurant special
           </p>
           
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '40px',
-            marginBottom: '60px'
-          }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-15">
             {features.map((feature, index) => (
-              <div key={index} style={{
-                backgroundColor: 'white',
-                padding: '40px 30px',
-                borderRadius: '15px',
-                boxShadow: '0 5px 20px rgba(0,0,0,0.1)',
-                textAlign: 'center',
-                transition: 'transform 0.3s ease'
-              }}>
-                <div style={{
-                  fontSize: '3rem',
-                  marginBottom: '20px'
-                }}>{feature.icon}</div>
-                <h3 style={{
-                  fontSize: '1.5rem',
-                  color: '#495E57',
-                  marginBottom: '15px'
-                }}>{feature.title}</h3>
-                <p style={{
-                  color: '#666',
-                  lineHeight: '1.6'
-                }}>{feature.description}</p>
+              <div 
+                key={index} 
+                className="bg-white p-10 rounded-2xl shadow-lg text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+              >
+                <div className="text-5xl mb-5">
+                  {feature.icon}
+                </div>
+                <h3 className="text-2xl text-[#495E57] mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -173,57 +107,32 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section style={{
-        padding: '80px 20px',
-        backgroundColor: '#495E57',
-        color: 'white'
-      }}>
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          textAlign: 'center'
-        }}>
-          <h2 style={{
-            fontSize: '2.5rem',
-            color: '#F4CE14',
-            marginBottom: '20px'
-          }}>What Our Customers Say</h2>
-          <p style={{
-            fontSize: '1.1rem',
-            color: '#E8E8E8',
-            marginBottom: '60px'
-          }}>
+      <section className="py-20 px-5 bg-[#495E57] text-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl text-[#F4CE14] mb-5">
+            What Our Customers Say
+          </h2>
+          <p className="text-lg text-gray-200 mb-15">
             Don't just take our word for it
           </p>
           
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '30px'
-          }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} style={{
-                backgroundColor: 'rgba(255,255,255,0.1)',
-                padding: '30px',
-                borderRadius: '15px',
-                backdropFilter: 'blur(10px)'
-              }}>
-                <div style={{
-                  marginBottom: '15px'
-                }}>
+              <div 
+                key={index} 
+                className="bg-white bg-opacity-10 p-8 rounded-2xl backdrop-blur-sm"
+              >
+                <div className="mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} style={{ color: '#F4CE14', fontSize: '1.2rem' }}>⭐</span>
+                    <span key={i} className="text-[#F4CE14] text-xl">⭐</span>
                   ))}
                 </div>
-                <p style={{
-                  fontStyle: 'italic',
-                  marginBottom: '20px',
-                  lineHeight: '1.6'
-                }}>"${testimonial.review}"</p>
-                <h4 style={{
-                  color: '#F4CE14',
-                  fontSize: '1.1rem'
-                }}>- {testimonial.name}</h4>
+                <p className="italic mb-5 leading-relaxed">
+                  "{testimonial.review}"
+                </p>
+                <h4 className="text-[#F4CE14] text-lg">
+                  - {testimonial.name}
+                </h4>
               </div>
             ))}
           </div>
@@ -231,40 +140,19 @@ const Home = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section style={{
-        padding: '60px 20px',
-        backgroundColor: '#F4CE14',
-        textAlign: 'center'
-      }}>
-        <div style={{
-          maxWidth: '800px',
-          margin: '0 auto'
-        }}>
-          <h2 style={{
-            fontSize: '2.2rem',
-            color: '#495E57',
-            marginBottom: '20px'
-          }}>Ready for an Unforgettable Dining Experience?</h2>
-          <p style={{
-            fontSize: '1.1rem',
-            color: '#495E57',
-            marginBottom: '30px'
-          }}>
+      <section className="py-15 px-5 bg-[#F4CE14] text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl text-[#495E57] mb-5">
+            Ready for an Unforgettable Dining Experience?
+          </h2>
+          <p className="text-lg text-[#495E57] mb-8">
             Book your table today and taste the authentic flavors of the Mediterranean
           </p>
           <Link to="/booking">
-            <button style={{
-              backgroundColor: '#495E57',
-              color: 'white',
-              border: 'none',
-              padding: '15px 40px',
-              fontSize: '1.1rem',
-              fontWeight: 'bold',
-              borderRadius: '8px',
-              cursor: 'pointer',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 4px 15px rgba(73, 94, 87, 0.3)'
-            }} aria-label="Make a reservation">
+            <button 
+              className="bg-[#495E57] text-white border-none px-10 py-4 text-lg font-bold rounded-lg cursor-pointer transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+              aria-label="Make a reservation"
+            >
               Make a Reservation
             </button>
           </Link>

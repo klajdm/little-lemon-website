@@ -3,93 +3,27 @@ import { NavLink } from "react-router-dom";
 import littlelemon_logo from "../images/littlelemon_logo.png";
 
 const Nav = () => {
-  const navStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "1rem 2rem",
-    paddingRight: "3rem",
-    backgroundColor: "#FFFFFF",
-    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-    position: "sticky",
-    top: 0,
-    zIndex: 1000,
-    width: "100%",
-    boxSizing: "border-box",
-  };
-
-  const logoStyle = {
-    height: "50px",
-    width: "auto",
-    cursor: "pointer",
-    transition: "transform 0.3s ease",
-  };
-
-  const logoLinkStyle = {
-    display: "flex",
-    alignItems: "center",
-    textDecoration: "none",
-  };
-
-  const ulStyle = {
-    display: "flex",
-    listStyle: "none",
-    margin: 0,
-    padding: 0,
-    gap: "2rem",
-  };
-
-  const linkStyle = {
-    textDecoration: "none",
-    color: "#495E57",
-    fontWeight: "500",
-    fontSize: "1rem",
-    padding: "0.5rem 1rem",
-    borderRadius: "5px",
-    transition: "all 0.3s ease",
-    position: "relative",
-  };
-
-  const activeLinkStyle = {
-    ...linkStyle,
-    backgroundColor: "#F4CE14",
-    color: "#495E57",
-    fontWeight: "600",
-  };
-
   return (
-    <nav style={navStyle}>
+    <nav className="flex justify-between items-center px-8 pr-12 py-4 bg-white shadow-md sticky top-0 z-50 w-full">
       <NavLink 
         to="/" 
-        style={logoLinkStyle}
-        onMouseEnter={(e) => {
-          const img = e.target.querySelector('img');
-          if (img) img.style.transform = "scale(1.05)";
-        }}
-        onMouseLeave={(e) => {
-          const img = e.target.querySelector('img');
-          if (img) img.style.transform = "scale(1)";
-        }}
+        className="flex items-center no-underline group"
       >
-        <img src={littlelemon_logo} alt="Little Lemon Logo" style={logoStyle} />
+        <img 
+          src={littlelemon_logo} 
+          alt="Little Lemon Logo" 
+          className="h-12 w-auto cursor-pointer transition-transform duration-300 ease-in-out group-hover:scale-105" 
+        />
       </NavLink>
-      <ul style={ulStyle}>
+      <ul className="flex list-none m-0 p-0 gap-8">
         <li>
           <NavLink
             to="/"
-            style={({ isActive }) => (isActive ? activeLinkStyle : linkStyle)}
-            onMouseEnter={(e) => {
-              if (!e.target.classList.contains("active")) {
-                e.target.style.backgroundColor = "#EDEFEE";
-                e.target.style.transform = "translateY(-2px)";
-              }
-            }}
-            onMouseLeave={(e) => {
-              if (!e.target.classList.contains("active")) {
-                e.target.style.backgroundColor = "transparent";
-                e.target.style.transform = "translateY(0)";
-              }
-            }}
+            className={({ isActive }) => 
+              isActive 
+                ? "no-underline text-[#495E57] font-semibold text-base px-4 py-2 rounded bg-[#F4CE14] transition-all duration-300 relative"
+                : "no-underline text-[#495E57] font-medium text-base px-4 py-2 rounded transition-all duration-300 relative hover:bg-[#EDEFEE] hover:-translate-y-0.5"
+            }
           >
             Home
           </NavLink>
@@ -97,19 +31,11 @@ const Nav = () => {
         <li>
           <NavLink
             to="/about"
-            style={({ isActive }) => (isActive ? activeLinkStyle : linkStyle)}
-            onMouseEnter={(e) => {
-              if (!e.target.classList.contains("active")) {
-                e.target.style.backgroundColor = "#EDEFEE";
-                e.target.style.transform = "translateY(-2px)";
-              }
-            }}
-            onMouseLeave={(e) => {
-              if (!e.target.classList.contains("active")) {
-                e.target.style.backgroundColor = "transparent";
-                e.target.style.transform = "translateY(0)";
-              }
-            }}
+            className={({ isActive }) => 
+              isActive 
+                ? "no-underline text-[#495E57] font-semibold text-base px-4 py-2 rounded bg-[#F4CE14] transition-all duration-300 relative"
+                : "no-underline text-[#495E57] font-medium text-base px-4 py-2 rounded transition-all duration-300 relative hover:bg-[#EDEFEE] hover:-translate-y-0.5"
+            }
           >
             About
           </NavLink>
@@ -117,19 +43,11 @@ const Nav = () => {
         <li>
           <NavLink
             to="/menu"
-            style={({ isActive }) => (isActive ? activeLinkStyle : linkStyle)}
-            onMouseEnter={(e) => {
-              if (!e.target.classList.contains("active")) {
-                e.target.style.backgroundColor = "#EDEFEE";
-                e.target.style.transform = "translateY(-2px)";
-              }
-            }}
-            onMouseLeave={(e) => {
-              if (!e.target.classList.contains("active")) {
-                e.target.style.backgroundColor = "transparent";
-                e.target.style.transform = "translateY(0)";
-              }
-            }}
+            className={({ isActive }) => 
+              isActive 
+                ? "no-underline text-[#495E57] font-semibold text-base px-4 py-2 rounded bg-[#F4CE14] transition-all duration-300 relative"
+                : "no-underline text-[#495E57] font-medium text-base px-4 py-2 rounded transition-all duration-300 relative hover:bg-[#EDEFEE] hover:-translate-y-0.5"
+            }
           >
             Menu
           </NavLink>
@@ -137,19 +55,11 @@ const Nav = () => {
         <li>
           <NavLink
             to="/booking"
-            style={({ isActive }) => (isActive ? activeLinkStyle : linkStyle)}
-            onMouseEnter={(e) => {
-              if (!e.target.classList.contains("active")) {
-                e.target.style.backgroundColor = "#EDEFEE";
-                e.target.style.transform = "translateY(-2px)";
-              }
-            }}
-            onMouseLeave={(e) => {
-              if (!e.target.classList.contains("active")) {
-                e.target.style.backgroundColor = "transparent";
-                e.target.style.transform = "translateY(0)";
-              }
-            }}
+            className={({ isActive }) => 
+              isActive 
+                ? "no-underline text-[#495E57] font-semibold text-base px-4 py-2 rounded bg-[#F4CE14] transition-all duration-300 relative"
+                : "no-underline text-[#495E57] font-medium text-base px-4 py-2 rounded transition-all duration-300 relative hover:bg-[#EDEFEE] hover:-translate-y-0.5"
+            }
           >
             Reservations
           </NavLink>
@@ -157,19 +67,11 @@ const Nav = () => {
         <li>
           <NavLink
             to="/order-online"
-            style={({ isActive }) => (isActive ? activeLinkStyle : linkStyle)}
-            onMouseEnter={(e) => {
-              if (!e.target.classList.contains("active")) {
-                e.target.style.backgroundColor = "#EDEFEE";
-                e.target.style.transform = "translateY(-2px)";
-              }
-            }}
-            onMouseLeave={(e) => {
-              if (!e.target.classList.contains("active")) {
-                e.target.style.backgroundColor = "transparent";
-                e.target.style.transform = "translateY(0)";
-              }
-            }}
+            className={({ isActive }) => 
+              isActive 
+                ? "no-underline text-[#495E57] font-semibold text-base px-4 py-2 rounded bg-[#F4CE14] transition-all duration-300 relative"
+                : "no-underline text-[#495E57] font-medium text-base px-4 py-2 rounded transition-all duration-300 relative hover:bg-[#EDEFEE] hover:-translate-y-0.5"
+            }
           >
             Order Online
           </NavLink>
@@ -177,19 +79,11 @@ const Nav = () => {
         <li>
           <NavLink
             to="/login"
-            style={({ isActive }) => (isActive ? activeLinkStyle : linkStyle)}
-            onMouseEnter={(e) => {
-              if (!e.target.classList.contains("active")) {
-                e.target.style.backgroundColor = "#EDEFEE";
-                e.target.style.transform = "translateY(-2px)";
-              }
-            }}
-            onMouseLeave={(e) => {
-              if (!e.target.classList.contains("active")) {
-                e.target.style.backgroundColor = "transparent";
-                e.target.style.transform = "translateY(0)";
-              }
-            }}
+            className={({ isActive }) => 
+              isActive 
+                ? "no-underline text-[#495E57] font-semibold text-base px-4 py-2 rounded bg-[#F4CE14] transition-all duration-300 relative"
+                : "no-underline text-[#495E57] font-medium text-base px-4 py-2 rounded transition-all duration-300 relative hover:bg-[#EDEFEE] hover:-translate-y-0.5"
+            }
           >
             Login
           </NavLink>
