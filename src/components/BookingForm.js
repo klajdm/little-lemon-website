@@ -137,93 +137,32 @@ const BookingForm = (props) => {
   };
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        background: "linear-gradient(135deg, #F4CE14 0%, #495E57 100%)",
-        padding: "40px 20px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "600px",
-          width: "100%",
-          backgroundColor: "white",
-          borderRadius: "20px",
-          boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-          overflow: "hidden",
-        }}
-      >
+    <div className="min-h-screen bg-gradient-to-br from-[#F4CE14] to-[#495E57] py-10 px-5 flex items-center justify-center">
+      <div className="max-w-2xl w-full bg-white rounded-3xl p-10 shadow-2xl">
         {/* Header */}
-        <div
-          style={{
-            background: "#495E57",
-            color: "white",
-            padding: "40px",
-            textAlign: "center",
-          }}
-        >
-          <h1
-            style={{
-              fontSize: "2.5rem",
-              marginBottom: "10px",
-              color: "#F4CE14",
-            }}
-          >
-            Reserve Your Table
+        <div className="text-center mb-8">
+          <h1 className="text-4xl text-[#495E57] mb-3 font-bold">
+            Reserve a Table
           </h1>
-          <p
-            style={{
-              fontSize: "1.1rem",
-              color: "#E8E8E8",
-              margin: 0,
-            }}
-          >
+          <p className="text-gray-600 text-lg">
             Book your perfect dining experience at Little Lemon
           </p>
         </div>
 
         {/* Form */}
-        <form
-          onSubmit={handleSubmit}
-          style={{ padding: "40px", maxWidth: "none" }}
-        >
+        <form onSubmit={handleSubmit} className="max-w-none">
           {errors.submit && (
-            <div
-              style={{
-                backgroundColor: "#ffebee",
-                color: "#c62828",
-                padding: "12px",
-                borderRadius: "8px",
-                marginBottom: "20px",
-                border: "1px solid #ffcdd2",
-              }}
-            >
+            <div className="bg-red-50 text-red-700 p-3 rounded-lg mb-5 border border-red-200">
               {errors.submit}
             </div>
           )}
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-              gap: "20px",
-              marginBottom: "20px",
-            }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
             {/* Name Field */}
             <div>
               <label
                 htmlFor="book-name"
-                style={{
-                  display: "block",
-                  marginBottom: "8px",
-                  fontWeight: "bold",
-                  color: "#495E57",
-                }}
+                className="block mb-2 font-bold text-[#495E57]"
               >
                 Full Name *
               </label>
@@ -235,27 +174,13 @@ const BookingForm = (props) => {
                   setName(e.target.value);
                   handleInputChange("name", e.target.value);
                 }}
-                style={{
-                  width: "100%",
-                  padding: "12px",
-                  border: errors.name ? "2px solid #c62828" : "2px solid #ddd",
-                  borderRadius: "8px",
-                  fontSize: "1rem",
-                  transition: "border-color 0.3s ease",
-                  boxSizing: "border-box",
-                  minWidth: "0",
-                }}
+                className={`w-full p-3 border-2 rounded-lg text-base transition-colors duration-300 box-border min-w-0 ${
+                  errors.name ? "border-red-700" : "border-gray-300"
+                }`}
                 placeholder="Enter your full name"
               />
               {errors.name && (
-                <span
-                  style={{
-                    color: "#c62828",
-                    fontSize: "0.875rem",
-                    marginTop: "4px",
-                    display: "block",
-                  }}
-                >
+                <span className="text-red-700 text-sm mt-1 block">
                   {errors.name}
                 </span>
               )}
@@ -265,12 +190,7 @@ const BookingForm = (props) => {
             <div>
               <label
                 htmlFor="book-email"
-                style={{
-                  display: "block",
-                  marginBottom: "8px",
-                  fontWeight: "bold",
-                  color: "#495E57",
-                }}
+                className="block mb-2 font-bold text-[#495E57]"
               >
                 Email Address *
               </label>
@@ -282,27 +202,13 @@ const BookingForm = (props) => {
                   setEmail(e.target.value);
                   handleInputChange("email", e.target.value);
                 }}
-                style={{
-                  width: "100%",
-                  padding: "12px",
-                  border: errors.email ? "2px solid #c62828" : "2px solid #ddd",
-                  borderRadius: "8px",
-                  fontSize: "1rem",
-                  transition: "border-color 0.3s ease",
-                  boxSizing: "border-box",
-                  minWidth: "0",
-                }}
+                className={`w-full p-3 border-2 rounded-lg text-base transition-colors duration-300 box-border min-w-0 ${
+                  errors.email ? "border-red-700" : "border-gray-300"
+                }`}
                 placeholder="Enter your email"
               />
               {errors.email && (
-                <span
-                  style={{
-                    color: "#c62828",
-                    fontSize: "0.875rem",
-                    marginTop: "4px",
-                    display: "block",
-                  }}
-                >
+                <span className="text-red-700 text-sm mt-1 block">
                   {errors.email}
                 </span>
               )}
@@ -310,15 +216,10 @@ const BookingForm = (props) => {
           </div>
 
           {/* Phone Field */}
-          <div style={{ marginBottom: "20px" }}>
+          <div className="mb-5">
             <label
               htmlFor="book-phone"
-              style={{
-                display: "block",
-                marginBottom: "8px",
-                fontWeight: "bold",
-                color: "#495E57",
-              }}
+              className="block mb-2 font-bold text-[#495E57]"
             >
               Phone Number *
             </label>
@@ -330,50 +231,24 @@ const BookingForm = (props) => {
                 setPhone(e.target.value);
                 handleInputChange("phone", e.target.value);
               }}
-              style={{
-                width: "100%",
-                padding: "12px",
-                border: errors.phone ? "2px solid #c62828" : "2px solid #ddd",
-                borderRadius: "8px",
-                fontSize: "1rem",
-                transition: "border-color 0.3s ease",
-                boxSizing: "border-box",
-                minWidth: "0",
-              }}
+              className={`w-full p-3 border-2 rounded-lg text-base transition-colors duration-300 box-border min-w-0 ${
+                errors.phone ? "border-red-700" : "border-gray-300"
+              }`}
               placeholder="Enter your phone number"
             />
             {errors.phone && (
-              <span
-                style={{
-                  color: "#c62828",
-                  fontSize: "0.875rem",
-                  marginTop: "4px",
-                  display: "block",
-                }}
-              >
+              <span className="text-red-700 text-sm mt-1 block">
                 {errors.phone}
               </span>
             )}
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-              gap: "20px",
-              marginBottom: "20px",
-            }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
             {/* Date Field */}
             <div>
               <label
                 htmlFor="book-date"
-                style={{
-                  display: "block",
-                  marginBottom: "8px",
-                  fontWeight: "bold",
-                  color: "#495E57",
-                }}
+                className="block mb-2 font-bold text-[#495E57]"
               >
                 Choose Date *
               </label>
@@ -383,26 +258,12 @@ const BookingForm = (props) => {
                 value={date}
                 min={today}
                 onChange={(e) => handleChange(e.target.value)}
-                style={{
-                  width: "100%",
-                  padding: "12px",
-                  border: errors.date ? "2px solid #c62828" : "2px solid #ddd",
-                  borderRadius: "8px",
-                  fontSize: "1rem",
-                  transition: "border-color 0.3s ease",
-                  boxSizing: "border-box",
-                  minWidth: "0",
-                }}
+                className={`w-full p-3 border-2 rounded-lg text-base transition-colors duration-300 box-border min-w-0 ${
+                  errors.date ? "border-red-700" : "border-gray-300"
+                }`}
               />
               {errors.date && (
-                <span
-                  style={{
-                    color: "#c62828",
-                    fontSize: "0.875rem",
-                    marginTop: "4px",
-                    display: "block",
-                  }}
-                >
+                <span className="text-red-700 text-sm mt-1 block">
                   {errors.date}
                 </span>
               )}
@@ -412,12 +273,7 @@ const BookingForm = (props) => {
             <div>
               <label
                 htmlFor="book-time"
-                style={{
-                  display: "block",
-                  marginBottom: "8px",
-                  fontWeight: "bold",
-                  color: "#495E57",
-                }}
+                className="block mb-2 font-bold text-[#495E57]"
               >
                 Choose Time *
               </label>
@@ -428,17 +284,9 @@ const BookingForm = (props) => {
                   setTimes(e.target.value);
                   handleInputChange("times", e.target.value);
                 }}
-                style={{
-                  width: "100%",
-                  padding: "12px",
-                  border: errors.times ? "2px solid #c62828" : "2px solid #ddd",
-                  borderRadius: "8px",
-                  fontSize: "1rem",
-                  transition: "border-color 0.3s ease",
-                  boxSizing: "border-box",
-                  backgroundColor: "white",
-                  minWidth: "0",
-                }}
+                className={`w-full p-3 border-2 rounded-lg text-base transition-colors duration-300 box-border bg-white min-w-0 ${
+                  errors.times ? "border-red-700" : "border-gray-300"
+                }`}
               >
                 <option value="">Select a Time</option>
                 {props.availableTimes.availableTimes.map((availableTime) => (
@@ -448,38 +296,19 @@ const BookingForm = (props) => {
                 ))}
               </select>
               {errors.times && (
-                <span
-                  style={{
-                    color: "#c62828",
-                    fontSize: "0.875rem",
-                    marginTop: "4px",
-                    display: "block",
-                  }}
-                >
+                <span className="text-red-700 text-sm mt-1 block">
                   {errors.times}
                 </span>
               )}
             </div>
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-              gap: "20px",
-              marginBottom: "20px",
-            }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
             {/* Guests Field */}
             <div>
               <label
                 htmlFor="book-guests"
-                style={{
-                  display: "block",
-                  marginBottom: "8px",
-                  fontWeight: "bold",
-                  color: "#495E57",
-                }}
+                className="block mb-2 font-bold text-[#495E57]"
               >
                 Number of Guests *
               </label>
@@ -493,29 +322,13 @@ const BookingForm = (props) => {
                   setGuests(e.target.value);
                   handleInputChange("guests", e.target.value);
                 }}
-                style={{
-                  width: "100%",
-                  padding: "12px",
-                  border: errors.guests
-                    ? "2px solid #c62828"
-                    : "2px solid #ddd",
-                  borderRadius: "8px",
-                  fontSize: "1rem",
-                  transition: "border-color 0.3s ease",
-                  boxSizing: "border-box",
-                  minWidth: "0",
-                }}
+                className={`w-full p-3 border-2 rounded-lg text-base transition-colors duration-300 box-border min-w-0 ${
+                  errors.guests ? "border-red-700" : "border-gray-300"
+                }`}
                 placeholder="1-10 guests"
               />
               {errors.guests && (
-                <span
-                  style={{
-                    color: "#c62828",
-                    fontSize: "0.875rem",
-                    marginTop: "4px",
-                    display: "block",
-                  }}
-                >
+                <span className="text-red-700 text-sm mt-1 block">
                   {errors.guests}
                 </span>
               )}
@@ -525,12 +338,7 @@ const BookingForm = (props) => {
             <div>
               <label
                 htmlFor="book-occasion"
-                style={{
-                  display: "block",
-                  marginBottom: "8px",
-                  fontWeight: "bold",
-                  color: "#495E57",
-                }}
+                className="block mb-2 font-bold text-[#495E57]"
               >
                 Occasion *
               </label>
@@ -541,19 +349,9 @@ const BookingForm = (props) => {
                   setOccasion(e.target.value);
                   handleInputChange("occasion", e.target.value);
                 }}
-                style={{
-                  width: "100%",
-                  padding: "12px",
-                  border: errors.occasion
-                    ? "2px solid #c62828"
-                    : "2px solid #ddd",
-                  borderRadius: "8px",
-                  fontSize: "1rem",
-                  transition: "border-color 0.3s ease",
-                  boxSizing: "border-box",
-                  backgroundColor: "white",
-                  minWidth: "0",
-                }}
+                className={`w-full p-3 border-2 rounded-lg text-base transition-colors duration-300 box-border bg-white min-w-0 ${
+                  errors.occasion ? "border-red-700" : "border-gray-300"
+                }`}
               >
                 <option value="">Select an Occasion</option>
                 <option value="Birthday">Birthday</option>
@@ -564,14 +362,7 @@ const BookingForm = (props) => {
                 <option value="Other">Other</option>
               </select>
               {errors.occasion && (
-                <span
-                  style={{
-                    color: "#c62828",
-                    fontSize: "0.875rem",
-                    marginTop: "4px",
-                    display: "block",
-                  }}
-                >
+                <span className="text-red-700 text-sm mt-1 block">
                   {errors.occasion}
                 </span>
               )}
@@ -579,15 +370,10 @@ const BookingForm = (props) => {
           </div>
 
           {/* Special Requests Field */}
-          <div style={{ marginBottom: "30px" }}>
+          <div className="mb-8">
             <label
               htmlFor="book-requests"
-              style={{
-                display: "block",
-                marginBottom: "8px",
-                fontWeight: "bold",
-                color: "#495E57",
-              }}
+              className="block mb-2 font-bold text-[#495E57]"
             >
               Special Requests (Optional)
             </label>
@@ -596,18 +382,7 @@ const BookingForm = (props) => {
               value={specialRequests}
               onChange={(e) => setSpecialRequests(e.target.value)}
               rows="3"
-              style={{
-                width: "100%",
-                padding: "12px",
-                border: "2px solid #ddd",
-                borderRadius: "8px",
-                fontSize: "1rem",
-                transition: "border-color 0.3s ease",
-                boxSizing: "border-box",
-                resize: "vertical",
-                fontFamily: "inherit",
-                minWidth: "0",
-              }}
+              className="w-full p-3 border-2 border-gray-300 rounded-lg text-base transition-colors duration-300 box-border resize-y font-inherit min-w-0"
               placeholder="Any dietary restrictions, seating preferences, or special requests..."
             />
           </div>
@@ -616,19 +391,11 @@ const BookingForm = (props) => {
           <button
             type="submit"
             disabled={isSubmitting}
-            style={{
-              width: "100%",
-              padding: "15px",
-              backgroundColor: isSubmitting ? "#ccc" : "#495E57",
-              color: "white",
-              border: "none",
-              borderRadius: "8px",
-              fontSize: "1.1rem",
-              fontWeight: "bold",
-              cursor: isSubmitting ? "not-allowed" : "pointer",
-              transition: "all 0.3s ease",
-              boxShadow: "0 4px 15px rgba(73, 94, 87, 0.3)",
-            }}
+            className={`w-full p-4 text-white border-none rounded-lg text-lg font-bold transition-all duration-300 shadow-lg ${
+              isSubmitting 
+                ? "bg-gray-400 cursor-not-allowed" 
+                : "bg-[#495E57] cursor-pointer hover:bg-[#3A4B47] hover:shadow-xl"
+            }`}
             aria-label="Submit reservation form"
           >
             {isSubmitting ? "Processing..." : "Make Your Reservation"}
