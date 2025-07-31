@@ -71,14 +71,8 @@ const Contact = () => {
                 Restaurant Information
               </h3>
               <div style={{ fontSize: "1.1rem", lineHeight: "2" }}>
-                <div
-                  style={{
-                    marginBottom: "15px",
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <span style={{ marginRight: "15px", fontSize: "1.5rem" }}>
+                <div className="mb-4 flex items-center">
+                  <span className="mr-4 text-2xl">
                     📍
                   </span>
                   <div>
@@ -89,14 +83,8 @@ const Contact = () => {
                     Chicago, IL 60601
                   </div>
                 </div>
-                <div
-                  style={{
-                    marginBottom: "15px",
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <span style={{ marginRight: "15px", fontSize: "1.5rem" }}>
+                <div className="mb-4 flex items-center">
+                  <span className="mr-4 text-2xl">
                     📞
                   </span>
                   <div>
@@ -105,14 +93,8 @@ const Contact = () => {
                     (312) 555-0123
                   </div>
                 </div>
-                <div
-                  style={{
-                    marginBottom: "15px",
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <span style={{ marginRight: "15px", fontSize: "1.5rem" }}>
+                <div className="mb-4 flex items-center">
+                  <span className="mr-4 text-2xl">
                     ✉️
                   </span>
                   <div>
@@ -124,44 +106,20 @@ const Contact = () => {
               </div>
             </div>
 
-            <div style={{ marginBottom: "40px" }}>
-              <h3
-                style={{
-                  fontSize: "1.3rem",
-                  color: "#F4CE14",
-                  marginBottom: "20px",
-                }}
-              >
+            <div className="mb-10">
+              <h3 className="text-xl text-[#F4CE14] mb-5">
                 Hours of Operation
               </h3>
-              <div style={{ fontSize: "1.1rem", lineHeight: "1.8" }}>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    marginBottom: "8px",
-                  }}
-                >
+              <div className="text-lg leading-relaxed">
+                <div className="flex justify-between mb-2">
                   <span>Monday - Thursday:</span>
                   <span>11:00 AM - 10:00 PM</span>
                 </div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    marginBottom: "8px",
-                  }}
-                >
+                <div className="flex justify-between mb-2">
                   <span>Friday - Saturday:</span>
                   <span>11:00 AM - 11:00 PM</span>
                 </div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    marginBottom: "8px",
-                  }}
-                >
+                <div className="flex justify-between mb-2">
                   <span>Sunday:</span>
                   <span>12:00 PM - 9:00 PM</span>
                 </div>
@@ -169,33 +127,21 @@ const Contact = () => {
             </div>
 
             <div>
-              <h3
-                style={{
-                  fontSize: "1.3rem",
-                  color: "#F4CE14",
-                  marginBottom: "20px",
-                }}
-              >
+              <h3 className="text-xl text-[#F4CE14] mb-5">
                 Follow Us
               </h3>
-              <div style={{ display: "flex", gap: "20px", fontSize: "2rem" }}>
-                <span style={{ cursor: "pointer" }}>📘</span>
-                <span style={{ cursor: "pointer" }}>📷</span>
-                <span style={{ cursor: "pointer" }}>🐦</span>
-                <span style={{ cursor: "pointer" }}>⭐</span>
+              <div className="flex gap-5 text-3xl">
+                <span className="cursor-pointer hover:scale-110 transition-transform duration-300">📘</span>
+                <span className="cursor-pointer hover:scale-110 transition-transform duration-300">📷</span>
+                <span className="cursor-pointer hover:scale-110 transition-transform duration-300">🐦</span>
+                <span className="cursor-pointer hover:scale-110 transition-transform duration-300">⭐</span>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div style={{ padding: "50px 40px" }}>
-            <h2
-              style={{
-                fontSize: "2rem",
-                color: "#495E57",
-                marginBottom: "30px",
-              }}
-            >
+          <div className="p-12">
+            <h2 className="text-3xl text-[#495E57] mb-8">
               Send Us a Message
             </h2>
 
@@ -214,24 +160,10 @@ const Contact = () => {
               </div>
             )}
 
-            <form onSubmit={handleSubmit} style={{ maxWidth: "none" }}>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: "20px",
-                  marginBottom: "20px",
-                }}
-              >
+            <form onSubmit={handleSubmit} className="max-w-none">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
                 <div>
-                  <label
-                    style={{
-                      display: "block",
-                      marginBottom: "8px",
-                      fontWeight: "bold",
-                      color: "#495E57",
-                    }}
-                  >
+                  <label className="block mb-2 font-bold text-[#495E57]">
                     Name *
                   </label>
                   <input
@@ -240,26 +172,12 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    style={{
-                      width: "100%",
-                      padding: "12px",
-                      border: "2px solid #ddd",
-                      borderRadius: "8px",
-                      fontSize: "1rem",
-                      boxSizing: "border-box",
-                    }}
+                    className="w-full p-3 border-2 border-gray-300 rounded-lg text-base box-border transition-colors duration-300 focus:border-[#495E57]"
                     placeholder="Your full name"
                   />
                 </div>
                 <div>
-                  <label
-                    style={{
-                      display: "block",
-                      marginBottom: "8px",
-                      fontWeight: "bold",
-                      color: "#495E57",
-                    }}
-                  >
+                  <label className="block mb-2 font-bold text-[#495E57]">
                     Email *
                   </label>
                   <input
@@ -268,36 +186,15 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    style={{
-                      width: "100%",
-                      padding: "12px",
-                      border: "2px solid #ddd",
-                      borderRadius: "8px",
-                      fontSize: "1rem",
-                      boxSizing: "border-box",
-                    }}
+                    className="w-full p-3 border-2 border-gray-300 rounded-lg text-base box-border transition-colors duration-300 focus:border-[#495E57]"
                     placeholder="your.email@example.com"
                   />
                 </div>
               </div>
 
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: "20px",
-                  marginBottom: "20px",
-                }}
-              >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
                 <div>
-                  <label
-                    style={{
-                      display: "block",
-                      marginBottom: "8px",
-                      fontWeight: "bold",
-                      color: "#495E57",
-                    }}
-                  >
+                  <label className="block mb-2 font-bold text-[#495E57]">
                     Phone
                   </label>
                   <input
@@ -305,26 +202,12 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    style={{
-                      width: "100%",
-                      padding: "12px",
-                      border: "2px solid #ddd",
-                      borderRadius: "8px",
-                      fontSize: "1rem",
-                      boxSizing: "border-box",
-                    }}
+                    className="w-full p-3 border-2 border-gray-300 rounded-lg text-base box-border transition-colors duration-300 focus:border-[#495E57]"
                     placeholder="(312) 555-0123"
                   />
                 </div>
                 <div>
-                  <label
-                    style={{
-                      display: "block",
-                      marginBottom: "8px",
-                      fontWeight: "bold",
-                      color: "#495E57",
-                    }}
-                  >
+                  <label className="block mb-2 font-bold text-[#495E57]">
                     Subject *
                   </label>
                   <select
@@ -332,15 +215,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    style={{
-                      width: "100%",
-                      padding: "12px",
-                      border: "2px solid #ddd",
-                      borderRadius: "8px",
-                      fontSize: "1rem",
-                      boxSizing: "border-box",
-                      backgroundColor: "white",
-                    }}
+                    className="w-full p-3 border-2 border-gray-300 rounded-lg text-base box-border bg-white transition-colors duration-300 focus:border-[#495E57]"
                   >
                     <option value="">Select a subject</option>
                     <option value="reservation">Reservation Inquiry</option>
@@ -353,15 +228,8 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div style={{ marginBottom: "25px" }}>
-                <label
-                  style={{
-                    display: "block",
-                    marginBottom: "8px",
-                    fontWeight: "bold",
-                    color: "#495E57",
-                  }}
-                >
+              <div className="mb-6">
+                <label className="block mb-2 font-bold text-[#495E57]">
                   Message *
                 </label>
                 <textarea
@@ -370,16 +238,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                   required
                   rows="6"
-                  style={{
-                    width: "100%",
-                    padding: "12px",
-                    border: "2px solid #ddd",
-                    borderRadius: "8px",
-                    fontSize: "1rem",
-                    boxSizing: "border-box",
-                    resize: "vertical",
-                    fontFamily: "inherit",
-                  }}
+                  className="w-full p-3 border-2 border-gray-300 rounded-lg text-base box-border resize-y font-inherit transition-colors duration-300 focus:border-[#495E57]"
                   placeholder="Tell us how we can help you..."
                 />
               </div>
@@ -387,19 +246,11 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                style={{
-                  width: "100%",
-                  padding: "15px",
-                  backgroundColor: isSubmitting ? "#ccc" : "#495E57",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "8px",
-                  fontSize: "1.1rem",
-                  fontWeight: "bold",
-                  cursor: isSubmitting ? "not-allowed" : "pointer",
-                  transition: "all 0.3s ease",
-                  boxShadow: "0 4px 15px rgba(73, 94, 87, 0.3)",
-                }}
+                className={`w-full p-4 text-white border-none rounded-lg text-lg font-bold transition-all duration-300 shadow-lg ${
+                  isSubmitting 
+                    ? "bg-gray-400 cursor-not-allowed" 
+                    : "bg-[#495E57] cursor-pointer hover:bg-[#3A4B47] hover:shadow-xl"
+                }`}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>
@@ -408,47 +259,18 @@ const Contact = () => {
         </div>
 
         {/* Map Section */}
-        <div
-          style={{
-            marginTop: "40px",
-            backgroundColor: "white",
-            borderRadius: "20px",
-            boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
-            overflow: "hidden",
-          }}
-        >
-          <div
-            style={{
-              padding: "40px",
-              textAlign: "center",
-            }}
-          >
-            <h2
-              style={{
-                fontSize: "2rem",
-                color: "#495E57",
-                marginBottom: "20px",
-              }}
-            >
+        <div className="mt-10 bg-white rounded-3xl shadow-xl overflow-hidden">
+          <div className="p-10 text-center">
+            <h2 className="text-3xl text-[#495E57] mb-5">
               Find Us
             </h2>
-            <div
-              style={{
-                backgroundColor: "#F8F9FA",
-                height: "300px",
-                borderRadius: "15px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "2px dashed #ddd",
-              }}
-            >
-              <div style={{ textAlign: "center", color: "#666" }}>
-                <div style={{ fontSize: "3rem", marginBottom: "15px" }}>🗺️</div>
-                <p style={{ fontSize: "1.2rem", margin: 0 }}>
+            <div className="bg-gray-50 h-80 rounded-2xl flex items-center justify-center border-2 border-dashed border-gray-300">
+              <div className="text-center text-gray-600">
+                <div className="text-5xl mb-4">🗺️</div>
+                <p className="text-xl m-0">
                   Interactive Map Coming Soon
                 </p>
-                <p style={{ fontSize: "1rem", margin: "10px 0 0 0" }}>
+                <p className="text-base mt-3 mb-0">
                   123 Mediterranean Ave, Chicago, IL 60601
                 </p>
               </div>
